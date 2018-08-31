@@ -1,0 +1,27 @@
+{
+  "name": "vr-rn-playground",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "react-native run-android",
+    "devtools:open": "adb shell input keyevent 82",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.4.1",
+    "react-native": "^0.55.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "babel-bridge": "^1.12.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.0",
+    "babel-preset-react-native": "^4.0.0",
+    "jest": "23.5.0",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

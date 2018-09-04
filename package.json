@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "16.4.1",
-    "react-native": "^0.55.4"
+    "react-native": "^0.55.4",
+    "react-native-material-kit": "^0.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.54",

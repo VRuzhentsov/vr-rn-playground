@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import { Platform, StyleSheet, Text, View, Alert } from 'react-native';
+import { MKButton, MKColor } from 'react-native-material-kit'
 import BananaImage from './components/misc/BananaImage'
 
 const instructions = Platform.select({
@@ -10,6 +11,25 @@ const instructions = Platform.select({
 });
 
 type Props = {};
+
+const alertBtnVariants = [
+  { text: 'Ask me later' },
+  { text: 'Cancel' },
+  { text: 'OK' }
+];
+
+const ColoredRaisedButton = MKButton.coloredButton()
+  .withText('Raised Button (Alert)')
+  .withOnPress(() => {
+    console.log('hi, raised button!');
+    Alert.alert(
+      'alert title',
+      'hi, raised button!',
+      alertBtnVariants
+    );
+  })
+  .build();
+
 export default class App extends Component<Props> {
   render() {
     return (
@@ -18,6 +38,7 @@ export default class App extends Component<Props> {
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
         <BananaImage/>
+        <ColoredRaisedButton/>
       </View>
     );
   }
